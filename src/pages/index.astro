@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import CorreoIcon from "../components/icons/Correo.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefIcon from "../components/icons/Brief.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Proyectos from "../components/Proyectos.astro";
+---
+
+<Layout
+  title="Jhandry Chimbo - Desarrollador y Programador Front-end"
+  description="Contrata a Jhandry para crear tu aplicación web o móvil. Desarrollador y programador front-end con experiencia en React, Next.js, y Tailwind CSS."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-24">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl
+        font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hi there, I'm Jhandry <a
+          href="https://linkedin.com/in/jhandrychimbo/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+
+        <h2 class="text-xl lg:text-2xl opacity-90 text-wrap max-w-[700px]">
+          Estudiande de Ingenieria en Ciencias de la Computacion en la
+          Universidad Nacional de Loja, enfocado en el desarrollo front-end y el
+          diseno UI/UX.
+        </h2>
+      </h1>
+
+      <nav class="flex gap-4 mt-6 flex-wrap">
+        <SocialPill href="https://linkedin.com/in/jhandrychimbo/">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/JhandryChimbo">
+          <GithubIcon class="size-4 md:size-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:jhandrychimbo@gmail.com">
+          <CorreoIcon class="size-4 md:size-6" />
+          jhandrychimbo@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefIcon class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Proyectos />
+    </SectionContainer>
+  </main></Layout
+>
