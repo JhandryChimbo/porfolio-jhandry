@@ -1,15 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AboutMe from "../components/AboutMe.astro";
 import Badge from "../components/Badge.astro";
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import SocialPill from "../components/SocialPill.astro";
-import GithubIcon from "../components/icons/Github.astro";
-import CorreoIcon from "../components/icons/Correo.astro";
-import Experience from "../components/Experience.astro";
-import SectionContainer from "../components/SectionContainer.astro";
 import BriefIcon from "../components/icons/Brief.astro";
 import CodeIcon from "../components/icons/Code.astro";
+import CorreoIcon from "../components/icons/Correo.astro";
+import Experience from "../components/Experience.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import Profile from "@/components/icons/Profile.astro";
 import Proyectos from "../components/Proyectos.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
 ---
 
 <Layout
@@ -68,6 +70,14 @@ import Proyectos from "../components/Proyectos.astro";
         Proyectos
       </h2>
       <Proyectos />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Profile class="size-7" />
+        Sobre mí
+      </h2>
+      <AboutMe />
     </SectionContainer>
   </main></Layout
 >
