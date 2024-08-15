@@ -1,6 +1,9 @@
 ---
+import Github from "./icons/Github.astro";
 import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import WebSite from "./icons/WebSite.astro";
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
   NEXT: {
@@ -29,28 +32,43 @@ const PROYECTOS = [
 ];
 ---
 
-{
-  PROYECTOS.map(({ image, title, description, tags }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-2 flex-row mb-2">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-            >
-              <tag.icon class="size-4" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        class="rounded shadow-2xl shadow-white/10"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
-    </article>
-  ))
-}
+<section class="flex flex-col gap-y-16">
+  {
+    PROYECTOS.map(({ image, title, description, tags, link, github }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-2 flex-row mb-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          class="rounded shadow-2xl shadow-white/10"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+        <footer class="flex gap-x-4 items-end justify-start mt-4">
+          {github && (
+            <LinkButton href={github}>
+              <Github class="size-6" />
+              Ver código fuente
+            </LinkButton>
+          )}
+
+          <LinkButton href={link}>
+            <WebSite class="size-6" />
+            Ir al sitio
+          </LinkButton>
+        </footer>
+      </article>
+    ))
+  }
+</section>
