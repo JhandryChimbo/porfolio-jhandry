@@ -13,6 +13,7 @@ import Proyectos from "../components/Proyectos.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Workana from "@/components/icons/Workana.astro";
+import Hero from "@/components/Hero.astro";
 ---
 
 <Layout
@@ -20,60 +21,25 @@ import Workana from "@/components/icons/Workana.astro";
   description="Contrata a Jhandry para crear tu aplicación web o móvil. Desarrollador y programador front-end con experiencia en React, Next.js, y Tailwind CSS."
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-24">
-      <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl
-        font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-      >
-        Hola 👋, Soy Jhandry<a
-          href="https://linkedin.com/in/jhandrychimbo/"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-          <Badge>Disponible para trabajar</Badge>
-        </a>
-
-        <h2 class="text-xl lg:text-2xl opacity-90 text-wrap max-w-[700px]">
-          Estudiande de Ingenieria en Ciencias de la Computacion en la
-          Universidad Nacional de Loja, enfocado en el desarrollo front-end y el
-          diseno UI/UX.
-        </h2>
-      </h1>
-
-      <nav class="flex gap-4 mt-6 flex-wrap">
-        <SocialPill href="https://linkedin.com/in/jhandrychimbo/">
-          <LinkedInIcon class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/JhandryChimbo">
-          <GithubIcon class="size-4 md:size-6" />
-          Github
-        </SocialPill>
-        <SocialPill
-          href="https://www.workana.com/freelancer/daeacb431b596f4a7aaa29c94b8a1d02"
-        >
-       
-          <Workana class="size-4 md:size-6" />
-          Workana
-        </SocialPill>
-        <SocialPill href="mailto:jhandrychimbo@gmail.com">
-          <CorreoIcon class="size-4 md:size-6" />
-          jhandrychimbo@gmail.com
-        </SocialPill>
-      </nav>
+    <SectionContainer class="py-16 md:py-36">
+      <Hero />
     </SectionContainer>
-
+  </main>
+  <div class="space-y-24">
     <SectionContainer id="experiencia">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-        <BriefIcon class="size-7" />
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <BriefIcon class="size-8" />
         Experiencia laboral
       </h2>
       <Experience />
     </SectionContainer>
 
     <SectionContainer id="proyectos">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
         <CodeIcon class="size-7" />
         Proyectos
       </h2>
@@ -81,11 +47,13 @@ import Workana from "@/components/icons/Workana.astro";
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-        <Profile class="size-7" />
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <Profile class="size-8" />
         Sobre mí
       </h2>
       <AboutMe />
     </SectionContainer>
-  </main></Layout
->
+  </div>
+</Layout>

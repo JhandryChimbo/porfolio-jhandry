@@ -1,0 +1,50 @@
+---
+import Badge from "./Badge.astro";
+import Workana from "./icons/Workana.astro";
+import SocialPill from "./SocialPill.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
+import GithubIcon from "./icons/Github.astro";
+import CorreoIcon from "./icons/Correo.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="/Perfil/AboutMe.jpg"
+      alt="Jhandry Chimbo"
+    />
+
+    <a
+      href="https://linkedin.com/in/jhandrychimbo/"
+      target="_blank"
+      rel="noopener"
+      class="flex justify-center items-center hover:scale-105 transition"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hola 👋, Soy Jhandry
+  </h1>
+
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    Estudiante de Ingenieria en Ciencias de la Computacion en la Universidad
+    Nacional de Loja, enfocado en el desarrollo front-end y el diseño UI/UX.
+  </p>
+
+  <nav class="flex gap-4 mt-6 flex-wrap">
+    <SocialPill href="https://linkedin.com/in/jhandrychimbo/">
+      <LinkedInIcon class="size-4 md:size-6" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="mailto:jhandrychimbo@gmail.com">
+      <CorreoIcon class="size-4 md:size-6" />
+      jhandrychimbo@gmail.com
+    </SocialPill>
+  </nav>
+</div>
