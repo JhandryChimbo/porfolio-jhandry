@@ -5,6 +5,8 @@ import Tailwind from "./icons/Tailwind.astro";
 import Express from "./icons/Express.astro";
 import Flutter from "./icons/Flutter.astro";
 import WebSite from "./icons/WebSite.astro";
+import Python from "./icons/Python.astro"
+import Html from "./icons/Html.astro"
 import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
@@ -29,10 +31,29 @@ const TAGS = {
     class: "bg-black text-white",
     icon: Express,
   },
+  PYTHON: {
+    name: "Python",
+    class: "bg-black text-white",
+    icon: Python,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-orange-400 text-white",
+    icon: Html,
+  },
 
 };
 
 const PROYECTOS = [
+  {
+    title: "Mobile App for Blood Pressure Control",
+    description:
+    "A clinical diagnostic web platform that predicts cardiovascular risk using advanced Machine Learning (XGBoost) and a FastAPI backend.",    link: "https://web-cardiovascular.vercel.app/",
+    download: null,
+    github: "https://github.com/JhandryChimbo/Web_Cardiovascular.git",
+    image: "/proyectos/CardioWeb.webp",
+    tags: [TAGS.PYTHON, TAGS.HTML],
+  },
   {
     title: "Mobile App for Blood Pressure Control",
     description:
